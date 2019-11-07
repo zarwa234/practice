@@ -1,0 +1,37 @@
+<html>
+<head>
+
+<style type="text/css">
+#target-rating{font-size:30px; text-align:center; font-weight:bold;}
+</style>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.js"></script>
+
+<script type="text/javascript">
+/*$(document).ready(function() { 
+       //var arrayOne = $('.voted').html().split('/');
+       var arrayOne = $('div[class*="voted"]').html().split('/');
+       var arrayTwo = arrayOne[0].split(' '); // arrayTwo[1] contains ie: 4.4
+       $('#target-rating').html(arrayTwo[1]);
+	   https://github.com/zarwa123/newProject.git///
+});*/
+</script>
+
+<script type="text/javascript">
+// This works for 2 divs
+$(function() {
+      var rating = $('div.inactive,div.voted inactive').text().replace(/^.*: ([\d\.]+).*$/, '$1'); // Extract the rating
+      $('#target-rating').text(rating); // And copy
+});
+</script>
+
+</head>
+<body>
+<div id="target-rating"></div>
+
+<!-- Example divs -->
+<div class="inactive" id="gdsr_mur_text_796_1">Rating: 4.4/<strong>5</strong> (5 votes cast)</div>
+<div class="voted inactive" id="gdsr_mur_text_796_1">Rating: 5.0/<strong>5</strong> (5 votes cast)</div>
+
+</body>
+</html>
