@@ -13,7 +13,7 @@
        var arrayOne = $('div[class*="voted"]').html().split('/');
        var arrayTwo = arrayOne[0].split(' '); // arrayTwo[1] contains ie: 4.4
        $('#target-rating').html(arrayTwo[1]);
-	   https://github.com/zarwa123/newProject.git///
+	   https://github.com/zarwa123/newProject.git/////
 });*/
 </script>
 
@@ -21,7 +21,7 @@
 // This works for 2 divs
 $(function() {
       var rating = $('div.inactive,div.voted inactive').text().replace(/^.*: ([\d\.]+).*$/, '$1'); // Extract the rating
-      $('#target-rating').text(rating); // And copy
+      $('#target-rating').text(rating); // And copy or paste
 });
 </script>
 
